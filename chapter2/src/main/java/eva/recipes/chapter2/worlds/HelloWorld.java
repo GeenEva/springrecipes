@@ -1,4 +1,4 @@
-package eva.recipes.chapter2;
+package eva.recipes.chapter2.worlds;
 
 
 import org.springframework.context.annotation.Profile;
