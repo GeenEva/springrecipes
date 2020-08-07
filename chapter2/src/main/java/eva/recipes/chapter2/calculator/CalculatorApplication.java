@@ -19,8 +19,8 @@ public class CalculatorApplication {
         calculator.calculate(25, 2, '-');
     }
 
-    @Bean
-    Calculator getCalculator(Collection<Operation> operations){
-        return new Calculator(operations);
-    }
+//    @Bean
+//    Calculator getCalculator(Collection<Operation> operations){
+//        return new Calculator(operations);
+//    }
 }
