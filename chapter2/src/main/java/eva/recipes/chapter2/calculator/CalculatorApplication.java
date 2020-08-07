@@ -19,6 +19,7 @@ public class CalculatorApplication {
         calculator.calculate(25, 2, '-');
     }
 
+      //The book calls this a factory method
 //    @Bean
 //    Calculator getCalculator(Collection<Operation> operations){
 //        return new Calculator(operations);
