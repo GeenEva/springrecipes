@@ -1,7 +1,6 @@
 package eva.recipes.chapter2calculator.calculator;
 
 import org.springframework.stereotype.Component;
-import eva.recipes.chapter2calculator.calculator.Operation;
 
 @Component
 public class MultiplyOperation implements Operation {
