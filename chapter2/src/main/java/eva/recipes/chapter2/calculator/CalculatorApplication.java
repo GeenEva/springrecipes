@@ -17,9 +17,9 @@ public class CalculatorApplication {
 
     @Bean
     public ApplicationRunner calculationRunner(Calculator calculator,
-                                               @Value("${leftSide}") int leftSide,
-                                               @Value ("${rightSide}") int rightSide,
-                                               @Value("${operator}") char operator){
+                                               @Value("${leftSide:25}") int leftSide,
+                                               @Value ("${rightSide:2}") int rightSide,
+                                               @Value("${operator:+}") char operator){
         return args -> calculator.calculate(leftSide, rightSide, operator);
     }
 }
