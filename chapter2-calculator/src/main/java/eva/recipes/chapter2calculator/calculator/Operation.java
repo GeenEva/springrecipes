@@ -1,4 +1,4 @@
-package eva.recipes.chapter2.calculator;
+package eva.recipes.chapter2calculator.calculator;
 
 public interface Operation {
 
