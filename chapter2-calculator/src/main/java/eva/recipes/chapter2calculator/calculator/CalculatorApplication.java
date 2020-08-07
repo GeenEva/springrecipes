@@ -7,8 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.PropertySource;
 
-import java.util.Collection;
-
 @PropertySource("classpath:my-props.properties") //but still application.properties has precedence (?!)
 @SpringBootApplication
 public class CalculatorApplication {
