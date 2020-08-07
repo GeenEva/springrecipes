@@ -1,5 +1,6 @@
 package eva.recipes.chapter2.calculator;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,11 +16,10 @@ public class CalculatorApplication {
     }
 
     @Bean
-    public ApplicationRunner calculationRunner(Calculator calculator){
-        return args -> {
-            calculator.calculate(25, 2, '+');
-            calculator.calculate(25, 2, '*');
-            calculator.calculate(25, 2, '-');
-        };
+    public ApplicationRunner calculationRunner(Calculator calculator,
+                                               @Value("${leftSide}") int leftSide,
+                                               @Value ("${rightSide}") int rightSide,
+                                               @Value("${operator}") char operator){
+        return args -> calculator.calculate(leftSide, rightSide, operator);
     }
 }

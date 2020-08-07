@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 import java.util.Collection;
 
-@Component //instead of factory method
+@Component
 public class Calculator {
 
     private final Collection<Operation> operations;
