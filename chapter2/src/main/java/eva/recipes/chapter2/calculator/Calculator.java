@@ -14,7 +14,7 @@ public class Calculator {
         for (var operation : operations){
             if(operation.handles(operator)){
                 var result = operation.apply(leftSide, rightSide);
-                System.out.printf("%d%s%d = %d%n", leftSide, operator, rightSide, result);
+                System.out.printf("%d %s %d = %d%n", leftSide, operator, rightSide, result);
                 return;
             }
         } throw new IllegalArgumentException("Unknown operation...");
