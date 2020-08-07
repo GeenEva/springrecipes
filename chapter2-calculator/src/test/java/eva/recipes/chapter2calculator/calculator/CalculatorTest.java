@@ -28,4 +28,14 @@ class CalculatorTest {
             calculator.calculate(2, 9, '*');
                 });
     }
+
+    @Test
+    public void shouldCallApplyMethodWhenSuitableOperationFound(){
+        /*
+        The mock is instructed to return true for the handles method
+        and a return value for the apply method.
+         */
+        when(mockOperation.handles(anyChar())).thenReturn(true);
+        when(mockOperation.apply(2, 5)).thenReturn(6);
+    }
 }
