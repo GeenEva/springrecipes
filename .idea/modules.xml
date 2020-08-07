@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/chapter1/chapter1.iml" filepath="$PROJECT_DIR$/chapter1/chapter1.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter2/chapter2.iml" filepath="$PROJECT_DIR$/chapter2/chapter2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter2-calculator/chapter2-calculator.iml" filepath="$PROJECT_DIR$/chapter2-calculator/chapter2-calculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/eva_recipes.iml" filepath="$PROJECT_DIR$/.idea/eva_recipes.iml" />
     </modules>
   </component>

@@ -1,9 +1,9 @@
-package eva.recipes.chapter2.calculator;
+package eva.recipes.chapter2calculator.calculator;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class AdditionOperation implements Operation{
+public class AdditionOperation implements eva.recipes.chapter2.calculator.Operation {
 
     @Override
     public int apply(int leftSide, int rightSide) {

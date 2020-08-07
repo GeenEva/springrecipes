@@ -1,4 +1,4 @@
-package eva.recipes.chapter2.calculator;
+package eva.recipes.chapter2calculator.calculator;
 
 import org.springframework.stereotype.Component;
 
@@ -7,9 +7,9 @@ import java.util.Collection;
 @Component
 public class Calculator {
 
-    private final Collection<Operation> operations;
+    private final Collection<eva.recipes.chapter2.calculator.Operation> operations;
 
-    public Calculator(Collection<Operation> operations) {
+    public Calculator(Collection<eva.recipes.chapter2.calculator.Operation> operations) {
         this.operations = operations;
     }
 
