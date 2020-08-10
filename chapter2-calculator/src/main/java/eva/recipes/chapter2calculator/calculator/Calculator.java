@@ -19,6 +19,6 @@ public class Calculator {
                 System.out.printf("%d %s %d = %d%n", leftSide, operator, rightSide, result);
                 return;
             }
-        } throw new IllegalArgumentException("Unknown operation...");
+        } throw new IllegalArgumentException("Unknown operation...: " + operator);
     }
 }
