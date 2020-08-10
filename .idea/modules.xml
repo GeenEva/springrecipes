@@ -6,6 +6,7 @@
       <module fileurl="file://$PROJECT_DIR$/chapter2/chapter2.iml" filepath="$PROJECT_DIR$/chapter2/chapter2.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter2-calculator/chapter2-calculator.iml" filepath="$PROJECT_DIR$/chapter2-calculator/chapter2-calculator.iml" />
       <module fileurl="file://$PROJECT_DIR$/chapter3-mvc-1/chapter3-mvc-1.iml" filepath="$PROJECT_DIR$/chapter3-mvc-1/chapter3-mvc-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/chapter3-mvc-2/chapter3-mvc-2.iml" filepath="$PROJECT_DIR$/chapter3-mvc-2/chapter3-mvc-2.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/eva_recipes.iml" filepath="$PROJECT_DIR$/.idea/eva_recipes.iml" />
     </modules>
   </component>
