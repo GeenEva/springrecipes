@@ -20,7 +20,7 @@
             <td th:text="${book.title}">Title</td>
             <td th:text="${book.authors}">Authors</td>
             <td>
-                <a th:href="@{/books.html(isbn=${book.isbn})}" href="#"
+                <a th:href="@{/books(isbn=${book.isbn})}" href="#"
                    th:text="${book.isbn}">1234567890123</a>
             </td>
             </tr>
