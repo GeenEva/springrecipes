@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:xmlns="@{http://www.w3.org/1999/xhtml}">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Library - Book Details</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+<body>
+<div th:if="${book != null}">
+    <div>
+        <div th:text="${book.title}">Title</div>
+        <div th:text="${book.authors}">Authors</div>
+        <div th:text="${book.isbn}">ISBN</div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -12,5 +12,9 @@
       </list>
     </option>
   </component>
+  <component name="ProjectResources">
+    <resource url="http://www.thymeleaf.org" location="$PROJECT_DIR$" />
+    <default-html-doctype>&quot;http://www.thymeleaf.org&quot;</default-html-doctype>
+  </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="11" project-jdk-type="JavaSDK" />
 </project>
