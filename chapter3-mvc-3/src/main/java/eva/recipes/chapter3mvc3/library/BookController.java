@@ -1,4 +1,4 @@
-package eva.recipes.chapter3mvc2.library;
+package eva.recipes.chapter3mvc3.library;
 
 
 import org.springframework.http.ResponseEntity;
@@ -19,7 +19,7 @@ public class BookController {
     }
 
    
-    public Iterable<Book> list() {
+    public Iterable<eva.recipes.chapter3mvc3.library.Book> list() {
         return bookService.findAll();
     }
 
@@ -31,7 +31,7 @@ public class BookController {
     }
 
     @GetMapping("/{isbn}")
-    public ResponseEntity<Book> getBookByIsbn(@PathVariable("isbn") String isbn){
+    public ResponseEntity<eva.recipes.chapter3mvc3.library.Book> getBookByIsbn(@PathVariable("isbn") String isbn){
         return bookService.find(isbn)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());

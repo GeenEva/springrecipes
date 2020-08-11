@@ -1,7 +1,7 @@
-package eva.recipes.chapter3mvc2;
+package eva.recipes.chapter3mvc3;
 
-import eva.recipes.chapter3mvc2.library.Book;
-import eva.recipes.chapter3mvc2.library.BookService;
+import eva.recipes.chapter3mvc3.library.Book;
+import eva.recipes.chapter3mvc3.library.BookService;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

@@ -1,4 +1,4 @@
-package eva.recipes.chapter3mvc2;
+package eva.recipes.chapter3mvc3;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
