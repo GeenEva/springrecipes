@@ -11,6 +11,7 @@ import java.util.Arrays;
 import java.util.Optional;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
+import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
@@ -49,5 +50,19 @@ class BookControllerTest {
         when(bookService.find(anyString())).thenReturn(Optional.empty());
 
         mockMvc.perform(get("/books/123")).andExpect(status().isNotFound());
+    }
+
+    @Test
+    public void shouldReturnBookWhenFound() throws Exception {
+        when(bookService.find(anyString())).thenReturn(
+                Optional.of(
+                        new Book("123", "Spring 5 Recipes", "Marten Deinum", "Josh Long")));
+
+        mockMvc.perform(get("/books/123"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.isbn", equalTo("123")))
+                .andExpect(jsonPath("$.title", equalTo("Spring 5 Recipes")))
+                .andExpect(jsonPath("$.authors", containsInAnyOrder("Marten Deinum", "Josh Long")));
+
     }
 }
