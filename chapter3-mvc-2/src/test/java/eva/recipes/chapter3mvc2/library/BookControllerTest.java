@@ -8,12 +8,15 @@ import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
 import java.util.Arrays;
+import java.util.Optional;
 
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.hamcrest.collection.IsCollectionWithSize.hasSize;
+import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.Mockito.when;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
 @WebMvcTest
@@ -40,4 +43,11 @@ class BookControllerTest {
 
     }
 
+    @Test
+    public void shouldReturn404WhenBookNotFound() throws Exception {
+
+        when(bookService.find(anyString())).thenReturn(Optional.empty());
+
+        mockMvc.perform(get("/books/123")).andExpect(status().isNotFound());
+    }
 }
