@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org" th:xmlns="@{http://www.w3.org/1999/xhtml}">
+<html xmlns:th="http://www.thymeleaf.org">
 
 <head>
     <meta charset="UTF-8">
@@ -15,6 +15,9 @@
     </div>
 </div>
 
+<div th:if="${book} == null">
+    <h1 th:text="'No book found with ISBN: ' + ${param.isbn}">Not Found</h1>
+</div>
 
 </body>
 </html>

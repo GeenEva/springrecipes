@@ -16,13 +16,13 @@ public class BookController {
     }
 
 
-    @GetMapping("/books")
+    @GetMapping("/books.html")
     public String all(Model model){
         model.addAttribute("books", bookService.findAll());
         return "books/list";
     }
 
-    @GetMapping(value = "/books", params = "isbn")
+    @GetMapping(value = "/books.html", params = "isbn")
     public String getByIsbn(@RequestParam("isbn") String isbn, Model model){
         bookService.find(isbn)
                 .ifPresent(book -> model.addAttribute("book", book));
