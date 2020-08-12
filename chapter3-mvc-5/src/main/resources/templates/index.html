@@ -2,13 +2,13 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="#{main.title}">Title from message properties</title>
 </head>
 <body>
 
-<h1>Library</h1>
+<h1 th:text="#{index.title}">Library</h1>
 
-<a th:href="@{/books.html}" href="#">List of books</a>
+<a th:href="@{/books.html}" href="#" th:text="#{index.books.link}">List of books</a>
 
 </body>
 </html>
