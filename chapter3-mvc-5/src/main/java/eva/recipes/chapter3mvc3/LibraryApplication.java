@@ -1,4 +1,4 @@
-package eva.recipes.chapter3mvc5;
+package eva.recipes.chapter3mvc3;
 
 import eva.recipes.chapter3mvc5.library.Book;
 import eva.recipes.chapter3mvc5.library.BookService;

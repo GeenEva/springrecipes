@@ -1,4 +1,4 @@
-package eva.recipes.chapter3mvc5.library;
+package eva.recipes.chapter3mvc3.library;
 
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;

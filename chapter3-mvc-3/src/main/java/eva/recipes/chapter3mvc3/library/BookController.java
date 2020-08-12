@@ -1,5 +1,4 @@
-package eva.recipes.chapter3mvc5.library;
-
+package eva.recipes.chapter3mvc3.library;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

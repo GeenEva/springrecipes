@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="chapter3-mvc-6" />
         <module name="chapter3-mvc-5" />
         <module name="chapter3-mvc-3" />
         <module name="chapter3-mvc-2" />
@@ -23,6 +24,8 @@
       <module name="chapter3-mvc-2" target="11" />
       <module name="chapter3-mvc-3" target="11" />
       <module name="chapter3-mvc-5" target="11" />
+      <module name="chapter3-mvc-5 (1)" target="11" />
+      <module name="chapter3-mvc-6" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -34,6 +37,8 @@
       <module name="chapter3-mvc-2" options="-parameters" />
       <module name="chapter3-mvc-3" options="-parameters" />
       <module name="chapter3-mvc-5" options="-parameters" />
+      <module name="chapter3-mvc-5 (1)" options="-parameters" />
+      <module name="chapter3-mvc-6" options="-parameters" />
     </option>
   </component>
 </project>
