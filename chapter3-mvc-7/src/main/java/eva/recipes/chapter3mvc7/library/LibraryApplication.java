@@ -1,13 +1,13 @@
-package eva.recipes.chapter3mvc7;
+package eva.recipes.chapter3mvc7.library;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Chapter3Mvc7Application {
+public class LibraryApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Chapter3Mvc7Application.class, args);
+		SpringApplication.run(LibraryApplication.class, args);
 	}
 
 }
