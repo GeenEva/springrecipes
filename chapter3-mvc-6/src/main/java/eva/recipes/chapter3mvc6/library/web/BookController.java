@@ -1,9 +1,13 @@
-package eva.recipes.chapter3mvc6.library;
+package eva.recipes.chapter3mvc6.library.web;
 
 
+import eva.recipes.chapter3mvc6.library.Book;
+import eva.recipes.chapter3mvc6.library.BookService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
@@ -24,13 +28,16 @@ public class BookController {
 
     @GetMapping(value = "/books.html", params = "isbn")
     public String getByIsbn(@RequestParam("isbn") String isbn, Model model){
+
         bookService.find(isbn)
                 .ifPresent(book -> model.addAttribute("book", book));
         return "/books/details";
     }
 
-    @GetMapping("/books/500")
-    public void error(){
-        throw new NullPointerException("Dummy NullPointerException.");
+    @PostMapping("/books")
+    public Book create(@ModelAttribute Book book){
+
+        return bookService.create(book);
+
     }
 }
