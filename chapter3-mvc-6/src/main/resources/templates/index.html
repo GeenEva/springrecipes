@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <title th:text="#{main.title}">Title from message properties</title>
 </head>
 <body>
 
+<h3 th:text="#{main.language}">Language</h3>
+<div>
+    <a href="?locale=nl" th:text="#{main.language.nl}">NL</a>
+    <a href="?locale=en" th:text="#{main.language.en}">EN</a>
+</div>
+
 <h1 th:text="#{index.title}">Library</h1>
 
-<a th:href="@{/books.html}" href="#" th:text="#{index.books.link}">List of books</a>
-
+<div>
+    <a th:href="@{/books.html}" href="#" th:text="#{index.books.link}">List of books</a>
+</div>
 </body>
 </html>
