@@ -1,5 +1,8 @@
 package eva.recipes.chapter3mvc6.library;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import java.util.*;
 
 public class Book {
@@ -8,9 +11,12 @@ public class Book {
     private String title;
     private List<String> authors = new ArrayList<>();
 
-    public Book(){}
 
-    public Book(String isbn, String title, String... authors) {
+    @JsonCreator
+    public Book(
+            @JsonProperty("isbn") String isbn,
+            @JsonProperty("title") String title,
+            @JsonProperty("authors") String... authors) {
         this.isbn = isbn;
         this.title = title;
         this.authors.addAll(Arrays.asList(authors));
@@ -20,24 +26,13 @@ public class Book {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
     public String getTitle() {
         return title;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
     public List<String> getAuthors() {
-        return Collections.unmodifiableList(authors);
-    }
 
-    public void setAuthors(List<String> authors) {
-        this.authors = authors;
+        return Collections.unmodifiableList(authors);
     }
 
     @Override
