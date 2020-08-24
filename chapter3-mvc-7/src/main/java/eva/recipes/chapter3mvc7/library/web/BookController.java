@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import java.awt.print.Book;
+import eva.recipes.chapter3mvc7.library.Book;
 
 @Controller
 public class BookController {
