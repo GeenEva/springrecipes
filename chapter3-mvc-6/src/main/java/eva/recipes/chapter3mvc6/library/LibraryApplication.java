@@ -31,7 +31,7 @@ public class LibraryApplication implements WebMvcConfigurer {
 	}
 
 	@Bean
-	private LocaleChangeInterceptor localeChangeInterceptor() {
+	public LocaleChangeInterceptor localeChangeInterceptor() {
 		return new LocaleChangeInterceptor();
 	}
 
