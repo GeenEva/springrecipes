@@ -19,26 +19,23 @@ public class BookController {
         this.bookService = bookService;
     }
 
-
     @GetMapping("/books.html")
-    public String all(Model model){
+    public String all(Model model) {
         model.addAttribute("books", bookService.findAll());
         return "books/list";
     }
 
     @GetMapping(value = "/books.html", params = "isbn")
-    public String getByIsbn(@RequestParam("isbn") String isbn, Model model){
+    public String get(@RequestParam("isbn") String isbn, Model model) {
 
         bookService.find(isbn)
                 .ifPresent(book -> model.addAttribute("book", book));
-        return "/books/details";
+
+        return "books/details";
     }
 
     @PostMapping("/books")
-    public Book create(@ModelAttribute Book book){
-
+    public Book create(@ModelAttribute Book book) {
         return bookService.create(book);
-
     }
 }
-

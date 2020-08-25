@@ -7,10 +7,10 @@ import java.util.*;
 
 public class Book {
 
-    private String isbn;
-    private String title;
-    private List<String> authors = new ArrayList<>();
 
+    private final String isbn;
+    private final String title;
+    private final List<String> authors = new ArrayList<>();
 
     @JsonCreator
     public Book(
@@ -31,12 +31,12 @@ public class Book {
     }
 
     public List<String> getAuthors() {
-
         return Collections.unmodifiableList(authors);
     }
 
     @Override
     public boolean equals(Object o) {
+
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
@@ -45,12 +45,14 @@ public class Book {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(isbn);
     }
 
     @Override
     public String toString() {
-        return String.format("Book [isbn=%s, title=%s, authors=%s]",
+        return String.format(
+                "Book [isbn=%s, title=%s, authors=%s]",
                 this.isbn, this.title, this.authors);
     }
 }
