@@ -11,10 +11,11 @@
         <module name="chapter3-mvc-3" />
         <module name="chapter3-mvc-2" />
         <module name="chapter3-mvc-1" />
-        <module name="chapter3-mvc-8" />
+        <module name="chapter4-mvc-1" />
+        <module name="chapter2-calculator" />
         <module name="chapter2" />
         <module name="chapter1" />
-        <module name="chapter2-calculator" />
+        <module name="chapter3-mvc-8" />
         <module name="chapter3-mvc-7" />
       </profile>
     </annotationProcessing>
@@ -30,6 +31,7 @@
       <module name="chapter3-mvc-6" target="11" />
       <module name="chapter3-mvc-7" target="11" />
       <module name="chapter3-mvc-8" target="11" />
+      <module name="chapter4-mvc-1" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -45,6 +47,7 @@
       <module name="chapter3-mvc-6" options="-parameters" />
       <module name="chapter3-mvc-7" options="-parameters" />
       <module name="chapter3-mvc-8" options="-parameters" />
+      <module name="chapter4-mvc-1" options="-parameters" />
     </option>
   </component>
 </project>
