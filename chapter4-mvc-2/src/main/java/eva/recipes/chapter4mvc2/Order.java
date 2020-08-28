@@ -34,6 +34,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return String.format("Order [id='%s', amount-%4.2f]", id, amount);
+        return String.format("Order [id='%s', amount=%4.2f]", id, amount);
     }
 }
