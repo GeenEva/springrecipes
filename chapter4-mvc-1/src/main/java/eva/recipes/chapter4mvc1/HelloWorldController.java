@@ -22,7 +22,7 @@ public class HelloWorldController {
     public CompletableFuture<String> hello(){
         return CompletableFuture.supplyAsync(() -> {
             randomDelay();
-            return "Hello World from Spring Boot ";
+            return "Hello World from Spring Boot";
         }, taskExecutor);
     }
 
