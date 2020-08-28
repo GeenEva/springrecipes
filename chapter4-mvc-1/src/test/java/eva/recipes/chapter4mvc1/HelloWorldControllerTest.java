@@ -25,10 +25,19 @@ class HelloWorldControllerTest {
 
     @Test
     public void testHelloWorldController() throws Exception {
+        /*
+        Async dispatch needs to be initiated.
+        First the initial request is performed and validated for async to be started
+         */
+
         MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/"))
                 .andExpect(request().asyncStarted())
                 .andDo(MockMvcResultHandlers.log())
                 .andReturn();
+
+        /*
+        ... Next the asyncDispatch is applied. And finally we can assert the expected response.
+         */
 
         mockMvc.perform(MockMvcRequestBuilders.asyncDispatch(mvcResult))
                 .andExpect(status().isOk())
