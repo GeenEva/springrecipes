@@ -1,4 +1,4 @@
-package eva.recipes.chapter5Reactive2.web;
+package eva.recipes.chapter5Reactive3.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

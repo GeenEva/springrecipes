@@ -1,7 +1,7 @@
-package eva.recipes.chapter5Reactive2.web;
+package eva.recipes.chapter5Reactive3.web;
 
 
-import eva.recipes.chapter5Reactive2.OrderService;
+import eva.recipes.chapter5Reactive3.OrderService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
