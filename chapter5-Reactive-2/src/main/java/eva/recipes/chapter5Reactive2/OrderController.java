@@ -26,7 +26,7 @@ public class OrderController {
         return orderService.findById(id);
     }
 
-    @GetMapping(produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
+    @GetMapping(produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<Order> list(){
         return orderService.orders();
     }
