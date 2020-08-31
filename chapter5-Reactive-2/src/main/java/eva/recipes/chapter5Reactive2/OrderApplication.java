@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class Chapter5Reactive2Application {
+public class OrderApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Chapter5Reactive2Application.class, args);
+		SpringApplication.run(OrderApplication.class, args);
 	}
 
 }
