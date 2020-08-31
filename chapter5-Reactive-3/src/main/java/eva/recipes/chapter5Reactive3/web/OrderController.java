@@ -6,6 +6,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.thymeleaf.spring5.context.webflux.ReactiveDataDriverContextVariable;
 import reactor.core.publisher.Mono;
 
 @Controller
@@ -18,10 +19,17 @@ public class OrderController {
         this.orderService = orderService;
     }
 
-    @GetMapping
+   /* @GetMapping
     public Mono<String> list(Model model){
         var orders  = orderService.orders();
         model.addAttribute("orders", orders);
+        return Mono.just("orders/list");
+    }*/
+
+    @GetMapping
+    public Mono<String> list(Model model){
+        var orders = orderService.orders();
+        model.addAttribute("orders", new ReactiveDataDriverContextVariable(orders, 2));
         return Mono.just("orders/list");
     }
 }
