@@ -1,5 +1,6 @@
 package eva.recipes.chapter5Reactive2;
 
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -25,7 +26,7 @@ public class OrderController {
         return orderService.findById(id);
     }
 
-    @GetMapping
+    @GetMapping(produces = MediaType.APPLICATION_STREAM_JSON_VALUE)
     public Flux<Order> list(){
         return orderService.orders();
     }
