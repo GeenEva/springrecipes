@@ -14,11 +14,6 @@
     <file url="file://$PROJECT_DIR$/chapter3-mvc-8/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter4-mvc-1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter4-mvc-2/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/../spring-boot-2-recipes/ch01/recipe_1_1_i/pom.xml" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/../spring-boot-2-recipes/ch04/recipe_4_4_i/pom.xml" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/../spring-boot-2-recipes/ch04/recipe_4_4_i/src/main/java/com/apress/springbootrecipes/echo/EchoHandler.java" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/../spring-boot-2-recipes/ch04/recipe_4_4_i/src/test/java/com/apress/springbootrecipes/echo/EchoHandlerIntegrationTest.java" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/../spring-boot-2-recipes/ch04/recipe_4_4_i/src/test/java/com/apress/springbootrecipes/echo/EchoHandlerTest.java" charset="ISO-8859-1" />
-    <file url="file://$PROJECT_DIR$/../spring-boot-2-recipes/spring-boot-2-recipes/ch04/recipe_4_4_i/pom.xml" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/chapter5-Reactive-1/src/main/java" charset="UTF-8" />
   </component>
 </project>
