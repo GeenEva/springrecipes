@@ -1,4 +1,4 @@
-package eva.recipes.chapter5Reactive4;
+package eva.recipes.chapter5Reactive4.echo;
 
 import org.springframework.web.reactive.socket.WebSocketHandler;
 import org.springframework.web.reactive.socket.WebSocketSession;
