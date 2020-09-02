@@ -42,7 +42,7 @@ public class EchoHandlerIntegrationTest {
 
     @Configuration
     @Import(EchoApplication.class)
-    public static class EchoHandlerIntegrationTestConfiguraion{
+    public static class EchoHandlerIntegrationTestConfiguration {
 
         @Bean
         public NettyReactiveWebServerFactory webServerFactory(){
