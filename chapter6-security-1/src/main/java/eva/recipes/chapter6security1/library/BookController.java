@@ -8,7 +8,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 
 @RestController
-@RequestMapping("/books")
+@RequestMapping("/books.html")
 public class BookController {
 
     private final BookService bookService;
