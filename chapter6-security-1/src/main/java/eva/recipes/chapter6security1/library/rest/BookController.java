@@ -1,6 +1,8 @@
-package eva.recipes.chapter6security1.library;
+package eva.recipes.chapter6security1.library.rest;
 
 
+import eva.recipes.chapter6security1.library.Book;
+import eva.recipes.chapter6security1.library.BookService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;

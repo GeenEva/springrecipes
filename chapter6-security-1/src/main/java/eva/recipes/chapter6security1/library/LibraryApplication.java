@@ -1,7 +1,5 @@
-package eva.recipes.chapter6security1;
+package eva.recipes.chapter6security1.library;
 
-import eva.recipes.chapter6security1.library.BookService;
-import eva.recipes.chapter6security1.library.Book;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
