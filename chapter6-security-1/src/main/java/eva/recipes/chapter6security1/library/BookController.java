@@ -1,4 +1,4 @@
-package eva.recipes.chapter3mvc2.library;
+package eva.recipes.chapter6security1.library;
 
 
 import org.springframework.http.ResponseEntity;
@@ -19,6 +19,7 @@ public class BookController {
 
     @GetMapping
     public Iterable<Book> list() {
+
         return bookService.findAll();
     }
 
