@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 @Controller
-@RequestMapping({"/books", "books.html"})
+@RequestMapping({"/books", "/books.html"})
 public class BookController {
 
     private final BookService bookService;
@@ -20,11 +20,11 @@ public class BookController {
         this.bookService = bookService;
     }
 
-    @GetMapping
+    /*@GetMapping
     public Iterable<Book> all() {
 
         return bookService.findAll();
-    }
+    }*/
 
     @GetMapping("/{isbn}")
     public ResponseEntity<Book> get(@PathVariable("isbn") String isbn){
