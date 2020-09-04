@@ -15,7 +15,7 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/login.html").setViewName("login");
+        registry.addViewController("/login").setViewName("login");
     }
 
     @Override
@@ -26,7 +26,7 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
                 .and().exceptionHandling()
                 .and().servletApi()
                 .and().httpBasic()
-                .and().formLogin().loginPage("/login.html")
+                .and().formLogin().loginPage("/login")
                 .and().csrf()
         ;
     }
