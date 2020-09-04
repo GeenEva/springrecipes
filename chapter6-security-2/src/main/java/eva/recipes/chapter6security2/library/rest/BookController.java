@@ -3,14 +3,14 @@ package eva.recipes.chapter6security2.library.rest;
 
 import eva.recipes.chapter6security2.library.Book;
 import eva.recipes.chapter6security2.library.BookService;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.net.URI;
-
 @RestController
-@RequestMapping("/books.html")
+@RequestMapping({"/books", "books.html"})
 public class BookController {
 
     private final BookService bookService;
@@ -20,7 +20,8 @@ public class BookController {
     }
 
     @GetMapping
-    public Iterable<Book> list() {
+    @ResponseBody
+    public Iterable<Book> all() {
 
         return bookService.findAll();
     }
@@ -33,9 +34,24 @@ public class BookController {
     }
 
     @PostMapping
-    public ResponseEntity<Book> createBook(@RequestBody Book book, UriComponentsBuilder uriBuilder){
-        Book created = bookService.create(book);
-        URI newBookUri = uriBuilder.path("/books/{isbn}").build(created.getIsbn());
+    public ResponseEntity<Book> create(@RequestBody Book book, UriComponentsBuilder uriBuilder){
+        var created = bookService.create(book);
+        var newBookUri = uriBuilder.path("/books/{isbn}").build(created.getIsbn());
         return ResponseEntity.created(newBookUri).body(created);
+    }
+
+    @GetMapping(produces = MediaType.TEXT_HTML_VALUE)
+    public String all(Model model) {
+        model.addAttribute("books", bookService.findAll());
+        return "books/list";
+    }
+
+    @GetMapping(params = "isbn", produces = MediaType.TEXT_HTML_VALUE)
+    public String get(@RequestParam("isbn") String isbn, Model model) {
+
+        bookService.find(isbn)
+                .ifPresent(book -> model.addAttribute("book", book));
+
+        return "books/details";
     }
 }

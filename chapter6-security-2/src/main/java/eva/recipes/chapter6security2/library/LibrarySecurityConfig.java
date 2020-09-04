@@ -1,4 +1,4 @@
-package eva.recipes.chapter6security2.library.rest;
+package eva.recipes.chapter6security2.library;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -31,6 +31,8 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
                 .and().csrf()
                 .and().logout()
                 .and().headers()
+                .and().anonymous().principal("guest").authorities("ROLE_GUEST")
+
         ;
     }
 }

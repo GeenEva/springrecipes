@@ -20,5 +20,6 @@
     <file url="file://$PROJECT_DIR$/chapter5-Reactive-4/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter6-security-1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/chapter6-security-2/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../spring-boot-2-recipes/spring-boot-2-recipes/ch06/recipe_6_3_i/src/main/java/com/apress/springbootrecipes/library/rest/BookController.java" charset="ISO-8859-1" />
   </component>
 </project>
