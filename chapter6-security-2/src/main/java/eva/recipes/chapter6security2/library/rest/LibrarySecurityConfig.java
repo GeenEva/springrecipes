@@ -30,6 +30,7 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
                 .failureUrl("/login?error=true")
                 .and().csrf()
                 .and().logout()
+                .and().headers()
         ;
     }
 }
