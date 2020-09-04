@@ -5,11 +5,12 @@ import eva.recipes.chapter6security2.library.Book;
 import eva.recipes.chapter6security2.library.BookService;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
-@RestController
+@Controller
 @RequestMapping({"/books", "books.html"})
 public class BookController {
 
@@ -20,14 +21,13 @@ public class BookController {
     }
 
     @GetMapping
-    @ResponseBody
     public Iterable<Book> all() {
 
         return bookService.findAll();
     }
 
     @GetMapping("/{isbn}")
-    public ResponseEntity<Book> getBookByIsbn(@PathVariable("isbn") String isbn){
+    public ResponseEntity<Book> get(@PathVariable("isbn") String isbn){
         return bookService.find(isbn)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
