@@ -26,7 +26,7 @@ public class LibrarySecurityConfig extends WebSecurityConfigurerAdapter implemen
                 .and().exceptionHandling()
                 .and().servletApi()
                 .and().httpBasic()
-                .and().formLogin().loginPage("/login")
+                .and().formLogin().loginPage("/login").defaultSuccessUrl("/books.html")
                 .and().csrf()
         ;
     }
