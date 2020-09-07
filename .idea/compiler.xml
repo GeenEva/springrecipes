@@ -10,19 +10,20 @@
         <module name="chapter5-Reactive-3" />
         <module name="chapter5-Reactive-2" />
         <module name="chapter5-Reactive-1" />
+        <module name="chapter1" />
         <module name="chapter6-security-2" />
         <module name="chapter6-security-1" />
-        <module name="chapter2" />
+        <module name="chapter3-mvc-1" />
+        <module name="chapter6-Security-4" />
         <module name="chapter3-mvc-8" />
         <module name="chapter3-mvc-7" />
         <module name="chapter3-mvc-6" />
         <module name="chapter3-mvc-5" />
-        <module name="chapter4-mvc-2" />
         <module name="chapter3-mvc-3" />
         <module name="chapter3-mvc-2" />
-        <module name="chapter3-mvc-1" />
+        <module name="chapter4-mvc-2" />
         <module name="chapter4-mvc-1" />
-        <module name="chapter1" />
+        <module name="chapter2" />
         <module name="chapter2-calculator" />
       </profile>
     </annotationProcessing>
@@ -46,6 +47,7 @@
       <module name="chapter5-Reactive-4" target="11" />
       <module name="chapter6-security-1" target="11" />
       <module name="chapter6-security-2" target="11" />
+      <module name="chapter6-Security-4" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -67,6 +69,7 @@
       <module name="chapter5-Reactive-2" options="-parameters" />
       <module name="chapter5-Reactive-3" options="-parameters" />
       <module name="chapter5-Reactive-4" options="-parameters" />
+      <module name="chapter6-Security-4" options="-parameters" />
       <module name="chapter6-security-1" options="-parameters" />
       <module name="chapter6-security-2" options="-parameters" />
     </option>
